@@ -1,6 +1,7 @@
 """
     singleton，单例模式，懒汉式
     剑指offer 2
+    通用解法（不依赖语言特性）：创建前加锁，加锁前后都检查
 """
 
 import threading

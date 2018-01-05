@@ -1,6 +1,8 @@
-package main
+/*
+	利用Golang的语言特性，使用sync.Once以只执行一次实例创建
+*/
 
-// 利用Golang的语言特性，使用sync.Once以只执行一次实例创建
+package main
 
 import (
 	"fmt"
@@ -10,11 +12,13 @@ import (
 var instance *Singleton
 var once sync.Once
 
+// Singleton 单例模式测试结构体
 type Singleton struct {
 	n int
 }
 
-func GetInstance() *Singleton {
+// NewSingleton 创建单例
+func NewSingleton() *Singleton {
 	once.Do(func() {
 		instance = &Singleton{}
 	})
@@ -22,11 +26,11 @@ func GetInstance() *Singleton {
 }
 
 func main() {
-	a := GetInstance()
+	a := NewSingleton()
 	fmt.Println(a)
 
 	a.n = 123
 
-	b := GetInstance()
+	b := NewSingleton()
 	fmt.Println(b)
 }
