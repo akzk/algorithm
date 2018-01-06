@@ -38,7 +38,7 @@ int find_dupli_num_in_arr1(int* arr, int n)
             i--;
         }
     }
-};
+}
 
 // 取值范围1~n-1，不断进行：取值范围对半分后统计落入前半段的arr元素个数，多于一半则重复数字在前半段，否则后半段
 int find_dupli_num_in_arr2(int* arr, int n)
@@ -70,7 +70,7 @@ int find_dupli_num_in_arr2(int* arr, int n)
     }
 
     return arr[end];
-};
+}
 
 int main()
 {
