@@ -1,3 +1,9 @@
+/*
+    剑指offer 6，从尾到头打印链表
+    1. 递归实现
+    2. 栈实现
+*/
+
 #include <iostream>
 #include <stack>
 using namespace std;
