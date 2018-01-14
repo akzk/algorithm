@@ -34,7 +34,3 @@ BinTreeNode* GetNext(BinTreeNode* node)
     }
     return pNext;
 }
-
-int main() {
-    
-}
