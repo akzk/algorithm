@@ -1,6 +1,10 @@
+/*
+    剑指offer 9(1)，两个栈实现一个队列
+    add时，一号栈负责被push
+    pop时，如果二号栈为空，一号栈元素转移到二号栈，然后再pop二号栈；不为空则直接pop二号栈
+*/
 #include <iostream>
 #include <stack>
-#include <exception>
 using namespace std;
 
 template <typename T> class CQueue
